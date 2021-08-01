@@ -1,0 +1,108 @@
+.body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+mat-icon {
+  opacity: 70%;
+}
+button:hover {
+  background-color: rgb(226, 226, 226);
+}
+mat-toolbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .search {
+    width: 50%;
+    border-style: none;
+   
+    
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 50%;
+   
+  }
+  .logo {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    grid-area: logo;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+  }
+  
+  .x {
+    font-size: xx-large;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .searchbar {
+    background-color: #f1f3f4;
+    width: 50%;
+    border-radius: 10px;
+    input {
+      background-color: #f1f3f4;
+      border-style: none;
+      font-size: medium;
+      width: match-parent;
+      padding: 6px 0px;
+      text-align:left;
+    
+    }
+  }
+  .profilepic:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+mat-sidenav-container {
+  height: 100%;
+  mat-sidenav {
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+    font-weight: 600;
+    border-style: none;
+    width: 280px;
+    height: 100%;
+    button {
+      margin-right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-color: transparent;
+    }
+    div {
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      border-radius: 0px 30px 30px 0px;
+    }
+    div:hover {
+      
+      background-color: rgb(226, 226, 226);
+      cursor: pointer;
+    }
+    .logout:hover {
+      background-color: #fa9806;
+    }
+  }
+}
+mat-sidenav {
+  height: 85%;
+  overflow-x: hidden;
+  background-color: white;
+}

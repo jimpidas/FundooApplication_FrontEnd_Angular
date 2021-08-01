@@ -1,0 +1,110 @@
+<div class="body">
+    <mat-toolbar>
+      <div class="toolbar" style="display: flex">
+        <button mat-icon-button (click)="toggleSidebar()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div class="logo">
+            <div>
+                <span class="color-fundoo-F" style="color:#4285F4">F</span>
+                <span class="color-fundoo" style="color:#4285F4">un</span>
+                <span class="color-fundoo" style="color:#EA4335">doo</span>
+                <span class="color-fundoo" style="color:#FBBC05">n</span>
+                <span class="color-fundoo" style="color:#4285F4">o</span>
+                <span class="color-fundoo" style="color:#34A853">t</span>
+                <span class="color-fundoo" style="color:#EA4335">e</span>
+                <span class="color-fundoo" style="color:#4285F4">s</span>
+              </div>
+        </div>
+      </div>
+  
+      <div class="searchbar">
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+        <input type="text"  placeholder="Search" />
+      </div>
+      <div class="refresh" style="display: flex; align-items: center">
+        <button mat-icon-button>
+          <mat-icon>refresh</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">view_agenda</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="settings_outline">settings_outline</mat-icon>
+        </button>
+        <button mat-icon-button style="margin-left: 20px">
+          <mat-icon>apps</mat-icon>
+        </button>
+        <img
+        class="profilepic"
+        src="https://randomuser.me/api/portraits/men/33.jpg"
+        style="width: 40px; height: 40px; border-radius: 50%; margin-left: 5px"
+        alt="pic"
+      />
+      </div>
+    </mat-toolbar>
+  
+  <mat-divider style="margin-bottom: 10px"></mat-divider>
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="opened">
+      <div class="link">
+        <button mat-icon-button>
+          <mat-icon>lightbulb_outline</mat-icon>
+        </button>
+        <p>Notes</p>
+      </div>
+      <div>
+        <button mat-icon-button>
+          <mat-icon>notifications_none</mat-icon>
+        </button>
+        <p>Reminders</p>
+      </div>
+      <div>
+        <button mat-icon-button>
+          <mat-icon>label_outline</mat-icon>
+        </button>
+        <p>BridgeLabz notes</p>
+      </div>
+      <div>
+        <button mat-icon-button>
+          <mat-icon>label_outline</mat-icon>
+        </button>
+
+        <p>Fav Universities</p>
+      </div>
+      <div>
+        
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">edit</mat-icon>
+        </button>
+
+        <p>Edit labels</p>
+      </div>
+      <div>
+        <button mat-icon-button >
+          <mat-icon class="material-icons-outlined">archive_outline</mat-icon>
+        </button>
+        <p>Archive</p>
+      </div>
+      <div>
+        <button mat-icon-button>
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+        <p>Trash</p>
+      </div>
+      <div  class="logout" (click)="logout()">
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">logout</mat-icon>
+        </button>
+        <p>Logout</p>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+     
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
