@@ -1,0 +1,37 @@
+<form [formGroup]="noteForm" >
+    <div class="first-title" >
+      <div class="title">{{ note.title }}</div>
+      <button mat-icon-button class="icons push_pin">
+        <mat-icon class="material-icons-outlined">push_pin</mat-icon>
+      </button>
+    </div>
+  
+    <div class="second-body">
+      <div class="body">{{ note.body }}</div>
+      <div></div>
+    </div>
+  
+    <div class="third-icons">
+      <div class="icons">
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">notifications_none</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">person_add</mat-icon>
+        </button>
+       
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">color_lens</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">insert_photo</mat-icon>
+        </button>
+        <button mat-icon-button >
+          <mat-icon class="material-icons-outlined">archive_outline</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined">more_vert</mat-icon>
+        </button>
+      </div>
+    </div>
+  </form>

@@ -24,7 +24,7 @@ mat-toolbar {
   .search {
     width: 50%;
     border-style: none;
-   
+    background-color: #f1f3f4;
     
   }
   button {
@@ -45,11 +45,7 @@ mat-toolbar {
     font-weight: 600;
   }
   
-  .x {
-    font-size: xx-large;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  
   .searchbar {
     background-color: #f1f3f4;
     width: 50%;
@@ -105,4 +101,21 @@ mat-sidenav {
   height: 85%;
   overflow-x: hidden;
   background-color: white;
+  
+}
+
+@media screen and (max-width: 700px) {
+  form {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 515px) {
+  form {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 418px) {
+  form {
+    width: 340px;
+  }
 }

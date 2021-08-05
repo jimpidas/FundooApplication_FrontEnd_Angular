@@ -20,6 +20,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { NoteComponent } from './Components/note/note.component';
+import { NotesComponent } from './Components/notes/notes.component';
+import { TakenoteComponent } from './Components/takenote/takenote.component';
 //import { AuthenticationGuard } from '../app/authGuard/authentication.guard';
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     LoginComponent,
     ForgetPasswordComponent,
     DashboardComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    NoteComponent,
+    NotesComponent,
+    TakenoteComponent
   ],
   imports: [
     BrowserModule,

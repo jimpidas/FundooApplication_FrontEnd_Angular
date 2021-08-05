@@ -5,14 +5,19 @@ import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
+import { NoteComponent } from './Components/note/note.component';
+import { NotesComponent } from './Components/notes/notes.component';
 //import {AuthenticationGuard} from './authGuard/authentication.guard'
 
 const routes: Routes = [{ path: 'register', component: RegisterComponent },
                         { path: 'login', component: LoginComponent },
                         { path: 'ForgetPassword', component: ForgetPasswordComponent },
-                        { path: 'Dashboard', component: DashboardComponent },
-                        { path: '', component: DashboardComponent },
-                        { path: 'ResetPassword/ :token', component: ResetPasswordComponent }
+                        { path: 'Dashboard', component: DashboardComponent ,
+                        children:[
+                              {path:'notes',component: NotesComponent}]},
+                       
+                        { path: '', component: LoginComponent},
+                        { path: 'ResetPassword/:token', component: ResetPasswordComponent }
 ];
 
 @NgModule({

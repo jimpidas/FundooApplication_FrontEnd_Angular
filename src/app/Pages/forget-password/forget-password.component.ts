@@ -46,7 +46,7 @@ export class ForgetPasswordComponent implements OnInit {
         (response: any) => {
           console.log(response);
           this.openSnackBar('password reset link has been sent to your registered email', 2000);
-          //this.router.navigateByUrl('/ResetPassword');
+          this.router.navigateByUrl('/ResetPassword/:token');
         },
         error => {
             this.openSnackBar('Sending password reset link failed: '+error.error.message,2000);

@@ -50,7 +50,7 @@
 
   <mat-sidenav-container>
     <mat-sidenav mode="side" [opened]="opened">
-      <div class="link">
+      <div class="link" (click)="routeNotes()">
         <button mat-icon-button>
           <mat-icon>lightbulb_outline</mat-icon>
         </button>
@@ -104,7 +104,8 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-     
+      <router-outlet></router-outlet>
+    
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

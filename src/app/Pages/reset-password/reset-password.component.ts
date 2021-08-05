@@ -90,16 +90,11 @@ export class ResetPasswordComponent implements OnInit {
         },
         error => {
           try {
-                if(error['status'] == 0){
-                  this.openSnackBar('Password reset failed: server offline', 2000,);
-                }
-                else{
-                  this.openSnackBar('Password reset failed: '+error['error']['message'], 2000);
-                    }
+                  this.openSnackBar('Password reset failed: '+error.error.message,2000);
+                   
                 } catch (error) {
-                  this.openSnackBar('Password reset link is invalid',0);
+                  this.openSnackBar('Password reset link is invalid :'+error.error.message,0);
               }
-            
             });
       } 
     }

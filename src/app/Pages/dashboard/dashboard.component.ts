@@ -15,6 +15,9 @@ export class DashboardComponent implements OnInit {
   toggleSidebar(){
     this.opened = !this.opened
   }
+  routeNotes(){
+    this.router.navigateByUrl('/Dashboard/notes');
+  }
   logout(){
     localStorage.clear();
     this.router.navigateByUrl('/login')
