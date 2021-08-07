@@ -1,4 +1,4 @@
-<form [formGroup]="noteForm">
+<form [formGroup]="updateForm">
     <div class="first">
       <input type="text" placeholder="Title" formControlName="title" />
       <button mat-icon-button>
@@ -7,19 +7,19 @@
     </div>
   
     <div class="first firsttext">
-      <p>BridgeLabz notes</p>
+     
       <button mat-icon-button>
         <mat-icon class="material-icons-outlined">local_offer</mat-icon>
       </button>
     </div>
   
     <div class="second">
-      <textarea type="text" placeholder="Take a note..." formControlName="body" ></textarea>
+      <input type="text" placeholder="Take a note..." formControlName="body" />
       <div></div>
     </div>
   
     <div class="second secondtext">
-      <p>Fav</p>
+      
       <div></div>
     </div>
   
@@ -50,6 +50,6 @@
           <mat-icon class="material-icons-outlined">redo</mat-icon>
         </button>
       </div>
-      <button class="close" mat-stroked-button (click)="close()">Close</button>
+      <button class="close" mat-stroked-button (click)="close()">Update</button>
     </div>
   </form>

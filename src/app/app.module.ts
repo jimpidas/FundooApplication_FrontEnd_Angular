@@ -23,6 +23,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NoteComponent } from './Components/note/note.component';
 import { NotesComponent } from './Components/notes/notes.component';
 import { TakenoteComponent } from './Components/takenote/takenote.component';
+import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
+import { MatDialogModule } from '@angular/material/dialog';
 //import { AuthenticationGuard } from '../app/authGuard/authentication.guard';
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { TakenoteComponent } from './Components/takenote/takenote.component';
     ResetPasswordComponent,
     NoteComponent,
     NotesComponent,
-    TakenoteComponent
+    TakenoteComponent,
+    UpdatenoteComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { TakenoteComponent } from './Components/takenote/takenote.component';
         MatSnackBarModule,
         MatToolbarModule,
         MatDividerModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,15 +3,7 @@ input {
     font-weight: 600;
     border-style: none;
     height: 45px;
-    background-color: transparent;
-  }
-  textarea{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    border-style: none;
-    height: 45px;
-    background-color: transparent;
-    
+    //   padding: 10px 30px;
   }
   input:focus,
   textarea:focus,
@@ -20,20 +12,23 @@ input {
   }
   button {
     opacity: 80%;
-    border-color: transparent;
     background-color: transparent;
+    border-color: transparent;
+    border-radius: 50%;
   }
   button:hover {
     background-color: #e3e6e7;
-    border-radius: 50%;
   }
   .mat-icon {
     font-size: 20px;
   }
+  
   form {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    width: 650px;
+   
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: match-parent;
     .first {
       display: flex;
       align-items: center;
@@ -49,7 +44,7 @@ input {
     .second {
       padding: 2px 20px;
       display: flex;
-      textarea {
+      input {
         width: 100%;
       }
     }

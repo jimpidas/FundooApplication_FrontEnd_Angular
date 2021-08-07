@@ -1,5 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl,FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
@@ -7,19 +9,40 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class NoteComponent implements OnInit {
   @Input() note: any ;
-  takeNoteExpanded:boolean = false;
-  constructor() { }
+  noteForm:FormGroup;
+  constructor(private formBuilder:FormBuilder,public dialog: MatDialog) {
+    this.noteForm = this.formBuilder.group({
+      title: new FormControl(""),
+      body: new FormControl(""),
+      reminder: new FormControl(""),
+      color: new FormControl(""),
+      isArchived: new FormControl(""),
+      isTrash: new FormControl(""),
+      isPin: new FormControl(""),
+      //UserModelID: new FormControl(null)
+      createdDate: new FormControl(""),
+      modifiedDate: new FormControl("")
+    });
+   }
 
   ngOnInit(): void {
   }
- noteForm: FormGroup = new FormGroup({
-    title: new FormControl(null),
-    body: new FormControl(null),
-    reminder: new FormControl(null),
-    color: new FormControl(null),
-    isArchived: new FormControl(null),
-    isTrash: new FormControl(null),
-    isPin: new FormControl(null),
-    UserModelID: new FormControl(null)
-  });
+  
+
+  openDialog(): void {
+    // console.log(note)
+    const dialogRef = this.dialog.open(UpdatenoteComponent, {
+      panelClass: 'custom-dialog-container',
+      width: '650px',
+      // height:'400px',
+      // data: {name: this.name, animal: this.animal}
+      data: this.note
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
 }

@@ -25,9 +25,9 @@ export class HttpService {
   {
     return this.http.get(this.BaseUrl + url,headers);
   }
-  put(url: any, data : any, isHeaderRequired:any=false,headers=null)
+  put(url: any, data : any, headers:any)
   {
-      return this.http.put(this.BaseUrl + url, data, isHeaderRequired && headers);
+      return this.http.put(this.BaseUrl + url, data, headers);
   }
   delete(url: any, isHeaderRequired:any=false,headers:null){
     

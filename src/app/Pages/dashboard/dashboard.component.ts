@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   opened = true;
+  
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -22,4 +24,5 @@ export class DashboardComponent implements OnInit {
     localStorage.clear();
     this.router.navigateByUrl('/login')
   }
+ 
 }

@@ -11,13 +11,14 @@ export class NotesComponent implements OnInit {
   notes:any;
   token: any;
  
+  
+  constructor(private http:HttpClient) { }
+
   receiveMessage($event: any) {
     this.note = $event
       console.log(this.note)
-    // this.notes.push(this.note)
+    
   }
-  constructor(private http:HttpClient) { }
-
   ngOnInit(): void {
     this.getAllNotes();
   }

@@ -1,17 +1,17 @@
 <form [formGroup]="noteForm" >
-    <div class="first-title" >
+    <div class="first" (click)="openDialog()">
       <div class="title">{{ note.title }}</div>
       <button mat-icon-button class="icons push_pin">
         <mat-icon class="material-icons-outlined">push_pin</mat-icon>
       </button>
     </div>
   
-    <div class="second-body">
+    <div class="second">
       <div class="body">{{ note.body }}</div>
       <div></div>
     </div>
   
-    <div class="third-icons">
+    <div class="third">
       <div class="icons">
         <button mat-icon-button>
           <mat-icon class="material-icons-outlined">notifications_none</mat-icon>

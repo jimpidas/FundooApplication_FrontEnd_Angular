@@ -1,4 +1,5 @@
 .body {
+    
     app-takenote {
       margin-top: 20px;
       margin-bottom: 30px;
@@ -6,11 +7,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .noteslist {
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-       
-      }
+    
   }
+  .row {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
