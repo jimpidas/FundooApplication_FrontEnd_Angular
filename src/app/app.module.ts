@@ -25,6 +25,7 @@ import { NotesComponent } from './Components/notes/notes.component';
 import { TakenoteComponent } from './Components/takenote/takenote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ColorsComponent } from './Components/colors/colors.component';
 //import { AuthenticationGuard } from '../app/authGuard/authentication.guard';
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     NoteComponent,
     NotesComponent,
     TakenoteComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
+    ColorsComponent
   ],
   imports: [
     BrowserModule,

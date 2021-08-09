@@ -36,11 +36,11 @@ export class UpdatenoteComponent implements OnInit {
         isPin: false,
         createdDate: "2021-08-05T15:05:48.368Z",
         modifiedDate: "2021-08-05T15:05:48.368Z",
-        notesId:this.data.notesId
+        //notesId:this.data.notesId
         }
         console.log(reqData);
       
-        this.userService.updateNote(reqData).subscribe(
+        this.userService.updateNote(reqData,this.data.notesId).subscribe(
           response => {
             console.log(response);
             

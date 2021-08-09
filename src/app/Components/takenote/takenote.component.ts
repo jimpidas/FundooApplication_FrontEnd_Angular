@@ -13,7 +13,7 @@ export class TakenoteComponent implements OnInit {
   noteForm:FormGroup;
 
 
-  constructor(private formBuilder:FormBuilder,private http:HttpClient,private router: Router,private userSevice:UserService) {
+  constructor(private formBuilder:FormBuilder,private http:HttpClient,private router: Router,private userService:UserService) {
     this.noteForm = this.formBuilder.group({
       title: ['', [Validators.maxLength(200),Validators.minLength(1)]],
       body: ['', [Validators.maxLength(400)]]
@@ -31,7 +31,7 @@ export class TakenoteComponent implements OnInit {
      //this.messageEvent.emit(this.noteForm?.value)
     
       
-     if(this.noteForm.value.title != null && this.noteForm.value.body != null)
+     if(this.noteForm.value.title != "" && this.noteForm.value.body != "")
     {
       let reqData ={
         title: this.noteForm.get('title')?.value,
@@ -47,9 +47,10 @@ export class TakenoteComponent implements OnInit {
       }
       console.log(reqData);
       
-      this.userSevice.addNote(reqData).subscribe(
+      this.userService.addNote(reqData).subscribe(
         response => {
           console.log(response);
+          this.reloadCurrentRoute();
           
         },
         (error)=>{
@@ -58,9 +59,10 @@ export class TakenoteComponent implements OnInit {
             console.log("fail")
           }
         })
-        this.reloadCurrentRoute();
+        
     } 
   }
+  
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {

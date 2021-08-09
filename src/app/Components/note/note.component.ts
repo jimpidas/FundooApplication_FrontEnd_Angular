@@ -27,8 +27,6 @@ export class NoteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-
   openDialog(): void {
     // console.log(note)
     const dialogRef = this.dialog.open(UpdatenoteComponent, {
@@ -45,4 +43,15 @@ export class NoteComponent implements OnInit {
     });
   }
 
+  opened = false;
+toggleColorPallete(){
+  this.opened = !this.opened
+}
+
+// bgColor : string = 'white';
+color:any;
+  receiveMessage($event: any) {
+    this.color = $event
+    // console.log(this.color)
+  }
 }

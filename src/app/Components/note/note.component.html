@@ -1,4 +1,4 @@
-<form [formGroup]="noteForm" >
+<form [formGroup]="noteForm" [ngStyle]="{ 'background-color': note.color }">
     <div class="first" (click)="openDialog()">
       <div class="title">{{ note.title }}</div>
       <button mat-icon-button class="icons push_pin">
@@ -19,8 +19,12 @@
         <button mat-icon-button>
           <mat-icon class="material-icons-outlined">person_add</mat-icon>
         </button>
-       
-        <button mat-icon-button>
+        <app-colors
+        *ngIf="opened"
+        (messageEvent)="receiveMessage($event)"
+        [notesId]="note.notesId"
+      ></app-colors>
+        <button mat-icon-button (click)="toggleColorPallete()">
           <mat-icon class="material-icons-outlined">color_lens</mat-icon>
         </button>
         <button mat-icon-button>
