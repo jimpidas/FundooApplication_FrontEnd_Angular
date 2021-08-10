@@ -26,6 +26,8 @@ import { TakenoteComponent } from './Components/takenote/takenote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ColorsComponent } from './Components/colors/colors.component';
+import { ThrashComponent } from './Components/thrash/thrash.component';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
 //import { AuthenticationGuard } from '../app/authGuard/authentication.guard';
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ColorsComponent } from './Components/colors/colors.component';
     NotesComponent,
     TakenoteComponent,
     UpdatenoteComponent,
-    ColorsComponent
+    ColorsComponent,
+    ThrashComponent,
+    ArchieveComponent
   ],
   imports: [
     BrowserModule,

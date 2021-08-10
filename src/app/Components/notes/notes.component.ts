@@ -31,10 +31,10 @@ getAllNotes(){
   .append('Access-Control-Allow-Origin', '*')
   .append('Authorization',`Bearer ${this.token}`);
   this.http
-      .get("https://localhost:44329/Notes",{ 'headers': headers })
+      .get("https://localhost:44329/Notes/ActiveNotes",{ 'headers': headers })
       .subscribe((res:any)=>{
         console.log(res);
-        this.notes = res.data;
+        this.notes = res.data.result;
       })  
 }
 }

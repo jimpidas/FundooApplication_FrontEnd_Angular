@@ -7,6 +7,8 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { ResetPasswordComponent } from './Pages/reset-password/reset-password.component';
 import { NoteComponent } from './Components/note/note.component';
 import { NotesComponent } from './Components/notes/notes.component';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
+import { ThrashComponent } from './Components/thrash/thrash.component';
 //import {AuthenticationGuard} from './authGuard/authentication.guard'
 
 const routes: Routes = [{ path: 'register', component: RegisterComponent },
@@ -14,7 +16,11 @@ const routes: Routes = [{ path: 'register', component: RegisterComponent },
                         { path: 'ForgetPassword', component: ForgetPasswordComponent },
                         { path: 'Dashboard', component: DashboardComponent ,
                         children:[
-                              {path:'notes',component: NotesComponent}]},
+                              {path:'notes',component: NotesComponent},
+                              {path:'archieve',component: ArchieveComponent},
+                              {path:'thrash',component:ThrashComponent}
+                            
+                            ]},
                        
                         { path: '', component: LoginComponent},
                         { path: 'ResetPassword/:token', component: ResetPasswordComponent }

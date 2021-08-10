@@ -1,0 +1,6 @@
+<div class="createdNotes">
+    <div class="note" *ngFor="let note of notesArray?.reverse()">
+      <div class="handleArchieve" *ngIf='note["isArchived"]===true'></div>
+      <app-note [note]=note></app-note>
+    </div>
+  </div>

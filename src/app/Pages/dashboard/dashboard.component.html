@@ -84,12 +84,12 @@
         <p>Edit labels</p>
       </div>
       <div>
-        <button mat-icon-button >
+        <button mat-icon-button (click)="routeArchive()" >
           <mat-icon class="material-icons-outlined">archive_outline</mat-icon>
         </button>
         <p>Archive</p>
       </div>
-      <div>
+      <div (click)="routeTrash()">
         <button mat-icon-button>
           <mat-icon>delete_outline</mat-icon>
         </button>
@@ -105,7 +105,7 @@
     
     <mat-sidenav-content>
       <router-outlet></router-outlet>
-      
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
